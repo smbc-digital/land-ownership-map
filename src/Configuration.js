@@ -15,7 +15,7 @@ const Configuration = {
     [
         {
             key: 'os1250_line',
-            url: 'http://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wms?',
             layerOptions: {
                 maxZoom: 20,
                 minZoom: 19,
@@ -28,7 +28,7 @@ const Configuration = {
         },
         {
             key: 'os1250_text',
-            url: 'http://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wms?',
             layerOptions: {
                 maxZoom: 20,
                 minZoom: 19,
@@ -41,7 +41,7 @@ const Configuration = {
         },
         {
             key: 'Leases',
-            url: 'http://scnmapsrv.stockport.gov.uk:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=land_ownership:leases&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=land_ownership:leases&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 onEachFeature: Leases_Popup,
                 maxZoom: 2,
@@ -53,7 +53,7 @@ const Configuration = {
        
         {
             key: 'Council Owned Land',
-            url: 'http://scnmapsrv.stockport.gov.uk:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=land_ownership:council_owned_land&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=land_ownership:council_owned_land&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 onEachFeature: Land_Ownership_Popup,
                 maxZoom: 2,
