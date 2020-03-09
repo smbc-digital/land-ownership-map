@@ -1,3 +1,4 @@
+import Leaflet from 'leaflet'
 import { Land_Ownership_Popup, Leases_Popup, Assets_Popup} from './Popups'
 import { LandOwnershipstyle, Leasesstyle, Assetsstyle} from './Styles'
 
@@ -65,9 +66,17 @@ const Configuration = {
             key: 'SMBC Assets',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=land_ownership:smbc_assets&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
-               // onEachFeature: Assets_Popup,
-                maxZoom: 2,
-               // style: Assetsstyle
+                onEachFeature: Assets_Popup,
+                maxZoom: 9,
+                pointToLayer: (feature, latlng) => {
+                    return Leaflet.circleMarker(latlng, {
+                        radius: 8,
+                        fillColor: '#15863a',
+                        color: '#000',
+                        weight: 1,
+                        fillOpacity: 1
+                    })
+                },
             },
             displayOverlay: true,
             visibleByDefault: true
