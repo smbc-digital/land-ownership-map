@@ -1,5 +1,5 @@
-import { Land_Ownership_Popup, Leases_Popup } from './Popups'
-import { LandOwnershipstyle, Leasesstyle} from './Styles'
+import { Land_Ownership_Popup, Leases_Popup, Assets_Popup} from './Popups'
+import { LandOwnershipstyle, Leasesstyle, Assetsstyle} from './Styles'
 
 const Configuration = {
     Map: {
@@ -49,8 +49,7 @@ const Configuration = {
             },
             displayOverlay: true,
             visibleByDefault: true
-        },
-       
+        },       
         {
             key: 'Council Owned Land',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=land_ownership:council_owned_land&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
@@ -58,6 +57,17 @@ const Configuration = {
                 onEachFeature: Land_Ownership_Popup,
                 maxZoom: 2,
                 style: LandOwnershipstyle
+            },
+            displayOverlay: true,
+            visibleByDefault: true
+        },
+        {
+            key: 'SMBC Assets',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=land_ownership:smbc_assets&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+               // onEachFeature: Assets_Popup,
+                maxZoom: 2,
+               // style: Assetsstyle
             },
             displayOverlay: true,
             visibleByDefault: true

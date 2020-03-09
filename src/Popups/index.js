@@ -13,8 +13,16 @@ const Leases_Popup = (feature, layer) => {
     </div>`
   layer.bindPopup(content)
 }
-
+const Assets_Popup = (feature, layer) => {
+  const content = `<div class="item"><i class="fa fa-home"></i><p class="title">Council Owned Property Assets</p>
+    <p></p>
+    <p class="info">Name: ${feature.properties.epims_property_name}</p>
+    <p class="info">UPRN: ${feature.properties.epims_uprn}</p>
+    </div>`
+  layer.bindPopup(content)
+}
 export {
   Land_Ownership_Popup,
-  Leases_Popup
+  Leases_Popup,
+  Assets_Popup
 }

@@ -35,8 +35,16 @@ const Leasesstyle = {
         fillColor: '#006400',
         fillOpacity: 0
 }
+const Assetsstyle = {
+    color: '#006400',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#006400',
+    fillOpacity: 0
+}
 
 export {
     LandOwnershipstyle,
-    Leasesstyle
+    Leasesstyle,
+    Assetsstyle
 }
