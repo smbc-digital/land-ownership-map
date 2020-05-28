@@ -1,6 +1,6 @@
 import Leaflet from 'leaflet'
 import { Land_Ownership_Popup, Leases_Popup, Assets_Popup} from './Popups'
-import { LandOwnershipstyle, Leasesstyle, Assetsstyle} from './Styles'
+import { LandOwnershipstyle, Leasesstyle } from './Styles'
 
 const Configuration = {
     Map: {
