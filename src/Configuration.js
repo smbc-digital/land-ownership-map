@@ -63,7 +63,7 @@ const Configuration = {
             visibleByDefault: true
         },
         {
-            key: 'SMBC Buildings',
+            key: 'Council Owned Buildings',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=land_ownership:smbc_buildings&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 onEachFeature: Assets_Popup,
