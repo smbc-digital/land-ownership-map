@@ -5,6 +5,7 @@ const Land_Ownership_Popup = (feature, layer) => {
   <span class="smbc-map__item__header__block__title">Land Ownership</span>
 </div>
 <div class="smbc-map__item__body">
+  <p>Name: ${feature.properties.property_name}</p>
   <p>Committee: ${feature.properties.committee_new}</p>
   <p>Title Number: ${feature.properties.titlenumber}</p>
 </div>
